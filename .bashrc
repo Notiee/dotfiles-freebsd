@@ -22,15 +22,8 @@ alias ff='fastfetch'
 
 
 # Custom prompt
-#if [[ -n $PS1 && -f ~/bash_prompt.sh ]]; then
-#	source ~/bash_prompt.sh
-#	ps1_dark_theme
-#fi
-
-if [[ -n $PS1 && -f ~/nota_prompt.sh ]]; then
-	. ~/nota_prompt.sh
-	ps1_nota_theme
+if [[ -n $PS1 && -f ~/dotfiles-freebsd/bash_prompt/setup.sh ]]; then
+	. ~/dotfiles-freebsd/bash_prompt/setup.sh
 fi
-
 
 

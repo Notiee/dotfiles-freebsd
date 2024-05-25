@@ -1,101 +1,3 @@
-# A lightweight (single file), cross-compatible (bash v3/v4,
-# MacOS, Linux), bash prompt with basic theming support. To 
-# install, just source this file from your .bashrc with, so
-# it is only loaded for an interactive session:
-#
-#   if [[ -n $PS1 && -f ~/nota_prompt.sh ]]; then
-#     . ~/nota_prompt.sh
-#     ps1_colorful_theme
-#   fi
-
-# Color definitions
- c_normal="\001$(tput sgr0)\002"
-  c_black="\001$(tput setaf 0)\002"
-    c_red="\001$(tput setaf 1)\002"
-  c_green="\001$(tput setaf 2)\002"
- c_yellow="\001$(tput setaf 3)\002"
-   c_blue="\001$(tput setaf 4)\002"
-c_magenta="\001$(tput setaf 5)\002"
-   c_cyan="\001$(tput setaf 6)\002"
-  c_white="\001$(tput setaf 7)\002"
- c_bblack="\001$(tput setaf 8)\002"
- c_bwhite="\001$(tput setaf 15)\002"
-
-
-
-
-function ps1_dark_theme {
-  c_token="$c_bblack"
-  c_time="$c_bblack"
-  c_dur_exit_zero="$c_bblack"
-  c_dur_exit_nonzero="$c_red"
-  c_user_root="$c_red"
-  c_user_nonroot="$c_bblack"
-  c_hostname="$c_bblack"
-  c_dir_path="$c_bblack"
-  c_git_branch="$c_bblack"
-  c_shell_jobs="$c_bblack"
-  c_text_input="$c_blue"
-  setup_ps1
-}
-
-
-function ps1_colorful_theme {
-  c_token="$c_white"
-  c_time="$c_bwhite"
-  c_dur_exit_zero="$c_green"
-  c_dur_exit_nonzero="$c_red"
-  c_user_root="$c_red"
-  c_user_nonroot="$c_magenta"
-  c_hostname="$c_yellow"
-  c_dir_path="$c_cyan"
-  c_git_branch="$c_magenta"
-  c_shell_jobs="$c_red"
-  c_text_input="$c_blue"
-  setup_ps1
-}
-
-
-function ps1_white_theme {
-  c_token="$c_bblack"
-  c_time="$c_bwhite"
-  c_dur_exit_zero="$c_bwhite"
-  c_dur_exit_nonzero="$c_red"
-  c_user_root="$c_red"
-  c_user_nonroot="$c_bwhite"
-  c_hostname="$c_bwhite"
-  c_dir_path="$c_bwhite"
-  c_git_branch="$c_bwhite"
-  c_shell_jobs="$c_bwhite"
-  c_text_input="$c_blue"
-  setup_ps1
-}
-
-
-
-function ps1_nota_theme {
-  c_token="$c_normal"
-  c_time="$c_yellow"
-  c_dur_exit_zero="$c_yellow"
-  c_dur_exit_nonzero="$c_red"
-  c_user_root="$c_magenta"
-  c_user_nonroot="$c_blue"
-  c_hostname="$c_green"
-  c_dir_path="$c_cyan"
-  c_git_branch="$c_cyan"
-  c_shell_jobs="$c_magenta"
-  c_text_input="$c_normal"
-  nota_prompt
-}
-
-
-
-
-
-
-
-# IMPLEMENTATION
-
 function timer_start {
   # timer will already be set if a user is invoking a set 
   # of commands such as cmd1 && cmd2. If we don't check, then
@@ -190,7 +92,7 @@ function wrap {
 
 
 
-function nota_prompt {
+function setup_ps1 {
   if [[ ! $(trap -p DEBUG) = *timer_start* ]]; then
     trap 'printf $c_normal; timer_start' DEBUG
   fi
@@ -241,3 +143,4 @@ function nota_prompt {
   # Color our text input; cmd output is sent to c_normal in TRAP above
   PS1+="${c_text_input}"
 }
+

@@ -3,7 +3,7 @@
 # VirtualBox
 #VboxClient-all &
 
-# VMware Workstation
+# VMware Workstation (uncomment only ONE of these)
 #vmware-user &
-vmtoolsd -n vmusr &
+#vmtoolsd -n vmusr &
 

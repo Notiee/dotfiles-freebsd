@@ -41,7 +41,7 @@ if [ -f ~/.xprofile ] ; then
 	. ~/.xprofile
 fi
 
-# xterm -geometry 100x30+100+100 &
-# exec twm
+xterm -geometry 100x30+100+100 &
+exec twm
 
-exec spectrwm
+# exec spectrwm

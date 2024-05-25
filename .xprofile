@@ -1,7 +1,7 @@
 # Get sourced by window managers (SDDM, LightDM etc..) when starting a session, also manually sourced by my .xinitrc
 
 # VirtualBox
-#VboxClient-all &
+#VBoxClient-all &
 
 # VMware Workstation (uncomment only ONE of these)
 #vmware-user &

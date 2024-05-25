@@ -1,0 +1,9 @@
+# Get sourced by window managers (SDDM, LightDM etc..) when starting a session, also manually sourced by my .xinitrc
+
+# VirtualBox
+#VboxClient-all &
+
+# VMware Workstation
+#vmware-user &
+vmtoolsd -n vmusr &
+

@@ -30,23 +30,23 @@ function setup_ps1 {
   PS1+="${c_time}\A "
 
   # [0s] Duration of last command; color reflects exit status
-  PS1+="$(wrap '[] ' $(color_timer $c_dur_exit_zero $c_dur_exit_nonzero))"
+  PS1+="\$(wrap '[] ' \$(color_timer '$c_dur_exit_zero' '$c_dur_exit_nonzero'))"
 
   # <username@host> Color of username changes if root
   PS1+="${c_token}<"
-  PS1+="$(color_user $c_user_nonroot $c_user_root)"
+  PS1+="\$(color_user '$c_user_nonroot' '$c_user_root')"
   PS1+="${c_token}@"
   PS1+="${c_hostname}\h"
   PS1+="${c_token}> "
 
   # [.../dir/dir/dir] Current path trimmed (compat w/ bash3 and bash4)
-  PS1+="$(wrap '[] ' $(color_dirtrim 3 $c_dir_path))"
+  PS1+="\$(wrap '[] ' \$(color_dirtrim 3 '$c_dir_path'))"
 
   # (master) Git branch name
-  PS1+="$(wrap '() ' $(color_branch $c_git_branch))"
+  PS1+="\$(wrap '() ' \$(color_branch '$c_git_branch'))"
 
   # <N> Number of jobs running and sleeping
-  PS1+="$(wrap '<> ' $(color_jobs $c_shell_jobs))"
+  PS1+="\$(wrap '<> ' \$(color_jobs '$c_shell_jobs'))"
 
   # Second part of the line drawing
   PS1+="\n${c_token}└─ "

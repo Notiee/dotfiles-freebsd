@@ -197,7 +197,7 @@ function ps1_red_theme {
 }
 
 function ps1_nota_theme {
-  c_token="$c_white"
+  c_token="$c_normal"
   c_time="$c_yellow"
   c_dur_exit_zero="$c_yellow"
   c_dur_exit_nonzero="$c_red"
@@ -207,7 +207,7 @@ function ps1_nota_theme {
   c_dir_path="$c_cyan"
   c_git_branch="$c_magenta"
   c_shell_jobs="$c_magenta"
-  c_text_input="$c_white"
+  c_text_input="$c_normal"
 }
 
 

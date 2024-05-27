@@ -105,7 +105,6 @@ function setup_ps1 {
     fi
   fi
 
-
   # Start with an empty prompt
   PS1=""
 
@@ -118,24 +117,24 @@ function setup_ps1 {
 
 
   # <username@host> Color of username changes if root
-  PS1+="\$(color_user $c_user_nonroot $c_user_root)"
+  PS1+="$(color_user $c_user_nonroot $c_user_root)"
   PS1+="${c_token} at "
   PS1+="${c_hostname}\h"
   PS1+="${c_token} in "
 
   # [.../dir/dir/dir] Current path trimmed (compat w/ bash3 and bash4)
-  PS1+="\$(color_dirtrim 3 $c_dir_path)"
+  PS1+="$(color_dirtrim 3 $c_dir_path)"
 
 
   # [0s] Duration of last command; color reflects exit status
-  PS1+="\$(color_timer $c_dur_exit_zero $c_dur_exit_nonzero)"
+  PS1+="$(color_timer $c_dur_exit_zero $c_dur_exit_nonzero)"
 
 
   # (master) Git branch name
-  PS1+="\$(color_branch $c_git_branch)"
+  PS1+="$(color_branch $c_git_branch)"
 
   # <N> Number of jobs running and sleeping
-  PS1+="\$(wrap '<> ' \$(color_jobs $c_shell_jobs))"
+  PS1+="$(wrap '<> ' $(color_jobs $c_shell_jobs))"
 
   # Second part of the line drawing
   PS1+="\n${c_token}└─ "

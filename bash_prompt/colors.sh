@@ -1,15 +1,15 @@
 # Color definitions
- c_normal="\001$(tput sgr0)\002"
-  c_black="\001$(tput setaf 0)\002"
-    c_red="\001$(tput setaf 1)\002"
-  c_green="\001$(tput setaf 2)\002"
- c_yellow="\001$(tput setaf 3)\002"
-   c_blue="\001$(tput setaf 4)\002"
-c_magenta="\001$(tput setaf 5)\002"
-   c_cyan="\001$(tput setaf 6)\002"
-  c_white="\001$(tput setaf 7)\002"
- c_bblack="\001$(tput setaf 8)\002"
- c_bwhite="\001$(tput setaf 15)\002"
+ c_normal="$(tput sgr0)"
+  c_black="$(tput setaf 0)"
+    c_red="$(tput setaf 1)"
+  c_green="$(tput setaf 2)"
+ c_yellow="$(tput setaf 3)"
+   c_blue="$(tput setaf 4)"
+c_magenta="$(tput setaf 5)"
+   c_cyan="$(tput setaf 6)"
+  c_white="$(tput setaf 7)"
+ c_bblack="$(tput setaf 8)"
+ c_bwhite="$(tput setaf 15)"
 
 
 # Color themes
@@ -68,7 +68,6 @@ function ps1_blue_theme {
   c_git_branch="$c_blue"
   c_shell_jobs="$c_blue"
   c_text_input="$c_red"
-  setup_ps1
 }
 
 function ps1_green_theme {
@@ -83,7 +82,6 @@ function ps1_green_theme {
   c_git_branch="$c_green"
   c_shell_jobs="$c_green"
   c_text_input="$c_yellow"
-  setup_ps1
 }
 
 function ps1_yellow_theme {
@@ -98,7 +96,6 @@ function ps1_yellow_theme {
   c_git_branch="$c_yellow"
   c_shell_jobs="$c_yellow"
   c_text_input="$c_blue"
-  setup_ps1
 }
 
 function ps1_red_theme {
@@ -113,7 +110,6 @@ function ps1_red_theme {
   c_git_branch="$c_red"
   c_shell_jobs="$c_red"
   c_text_input="$c_blue"
-  setup_ps1
 }
 
 function ps1_nota_theme {

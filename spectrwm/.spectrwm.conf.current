@@ -23,7 +23,7 @@ workspace_limit		= 10
 
 border_width		= 2
 color_focus		= red
-#color_focus_maximized	= yellow
+color_focus_maximized	= yellow
 #color_unfocus		= rgb:88/88/88
 #color_unfocus_maximized	= rgb:88/88/00
 #color_focus_free	= cyan
@@ -45,6 +45,7 @@ tile_gap		= 5
 ###############################################
 #	BAR			              #
 ###############################################
+
 #bar_enabled		= 1
 #bar_enabled_ws[1]	= 1
 #bar_border_width	= 1
@@ -104,6 +105,9 @@ bar_action_expand	= 1
 
 
 ## TESTING STUFF
+bar_action = ~/dotfiles-freebsd/spectrwm/baraction.sh
+
+
 bar_border_width = 5
 bar_border[1] = rgb:00/00/00
 #bar_border_unfocus[1] = rgb:1d/20/21
@@ -137,17 +141,17 @@ workspace_mark_empty_suffix = +@fg=0;
 #workspace_mark_active = \+@bg=0;+@fg=8;
 #workspace_mark_empty = \+@bg=0;+@fg=8;
 
-stack_mark_horizontal	= 'h'
+stack_mark_horizontal		= 'h'
 stack_mark_horizontal_flip	= 'h*'
-stack_mark_vertical	= 'v'
+stack_mark_vertical		= 'v'
 stack_mark_vertical_flip	= 'v*'
-stack_mark_max		= 'max'
-stack_mark_floating	= '~'
-focus_mark_none	= '-'
-focus_mark_normal	= 'normal'
-focus_mark_floating	= 'float'
-focus_mark_maximized	= 'maximized'
-focus_mark_free	= 'free'
+stack_mark_max			= 'max'
+stack_mark_floating		= '~'
+focus_mark_none			= '-'
+focus_mark_normal		= 'normal'
+focus_mark_floating		= 'float'
+focus_mark_maximized		= 'maximized'
+focus_mark_free			= 'free'
 
 
 bar_format = +@fg=0;+_2I+@fg=0; +@fg=4;+_5D+@fg=0; +1< +@fg=7;+@bg=5;+1<+S+1<+@bg=0;+@fg=0;+@bg=7;+@fg=7;+1<+F+1<+@bg=0;+@fg=0; +1< +L +2<+@fg=6;+W+@fg=0; +|T +@fg=1;%T +1< %d-%m-%y+@fg=0; +|R +A

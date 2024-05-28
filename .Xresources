@@ -1,3 +1,6 @@
+! Force 256color mode
+XTerm.termName: xterm-256color
+
 ! Colorscheme
 ! xterm*foreground: white
 ! xterm*background: black

@@ -51,7 +51,7 @@ print_mem() {
 }
 
 print_disk() {
-	disk=$(df -h | grep /dev/ada0p2)
+	disk=$(df -h | grep -m 1 /dev/)
 	size=$(echo $disk | awk '{print $2}' | cut -d 'G' -f 1)
 	used=$(echo $disk | awk '{print $3}' | cut -d 'G' -f 1)
 	used_p=$(percent $used $size)

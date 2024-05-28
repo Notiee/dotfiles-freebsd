@@ -11,7 +11,6 @@ DIR=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
 #. $DIR/templates/original.sh
 . $DIR/templates/nota.sh
 
-
 # Set color theme
 #ps1_colorful_theme
 #ps1_blue_theme

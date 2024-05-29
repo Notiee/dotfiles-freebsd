@@ -4,9 +4,10 @@ print_date() {
 	# The date is printed to the status bar by default.
 	# To print the date through this script, set clock_enabled to 0
 	# in spectrwm.conf.  Uncomment "print_date" below.
-	FORMAT="%a %b %d %R %Z %Y"
+	#FORMAT="%a %b %d %R %Z %Y"
+	FORMAT="%T %d-%m-%y"
 	DATE=$(date "+${FORMAT}")
-	echo -n "${DATE}     "
+	echo -n "${DATE}"
 }
 
 # Convert bytes to mb
@@ -44,10 +45,6 @@ print_mem() {
 	# Display
 	#echo  Used: $(mb $mem_used) MB \| free: $(mb $mem_free) MB \| phys: $(mb $mem_phys) MB
 	echo $(mb $mem_used)mb / $(mb $mem_phys)mb \($used_p%\)
-
-
-	# MEM=$(/usr/bin/top | grep Free: | cut -d " " -f6)
-	# echo -n "Free mem: $MEM  "
 }
 
 print_disk() {
@@ -77,8 +74,6 @@ print_vol() {
 
 
 while :; do
-	# print_date
-	# print_mem
-	echo "+@fg=1;vol +@fg=4;$(print_vol)+@fg=0; | +@fg=1;mem +@fg=3;$(print_mem)+@fg=0; | +@fg=1;hdd +@fg=6;$(print_disk)+@fg=0;"
-	sleep 2
+	echo "+@fg=1;vol +@fg=4;$(print_vol)+@fg=0; | +@fg=1;mem +@fg=3;$(print_mem)+@fg=0; | +@fg=1;hdd +@fg=5;$(print_disk)+@fg=0; | +@fg=1;date +@fg=6;$(print_date)+@fg=0;"
+	sleep 1
 done

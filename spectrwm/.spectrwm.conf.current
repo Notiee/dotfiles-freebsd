@@ -117,10 +117,10 @@ bar_font = = Cozette:pixelsize=12:antialias=false
 
 #bg gruvbox     darkgray     midgray      red        bright red     green     light green     blue       light blue    yellow     bright yellow
 bar_color[0] = rgb:00/00/00,rgb:66/5c/54,rgb:cc/24/1d,rgb:fb/49/34,rgb:68/9d/6a,rgb:8e/c0/7c,rgb:07/66/78,rgb:45/85/88,rgb:d7/99/21,rgb:fa/bd/2f
-bar_color_selected[1] = rgb:07/66/78
+bar_color_selected[1] = rgb:45/85/88
 
-#fg gruvbox     white       white2       red          green        yellow          blue      magenta       darkgray     midgray
-bar_font_color[0] = rgb:eb/db/b2,rgb:a8/99/84,rgb:cc/24/1d,rgb:68/9d/6a,rgb:d7/99/21,rgb:07/66/78,rgb:8f/3f/71,rgb:1d/20/21,rgb:66/5c/54
+#fg gruvbox         white         white2       red          green        yellow      light blue     magenta       darkgray     midgray    pink
+bar_font_color[0] = rgb:eb/db/b2,rgb:a8/99/84,rgb:cc/24/1d,rgb:68/9d/6a,rgb:d7/99/21,rgb:45/85/88,rgb:8f/3f/71,rgb:1d/20/21,rgb:66/5c/54,rgb:ff/c0/cb
 bar_font_color_selected = rgb:1d/20/21
 
 
@@ -154,7 +154,7 @@ focus_mark_maximized		= 'maximized'
 focus_mark_free			= 'free'
 
 
-bar_format = +@fg=0;+_2I+@fg=0; +@fg=4;+_5D+@fg=0; +1< +@fg=7;+@bg=5;+1<+S+1<+@bg=0;+@fg=0;+@bg=7;+@fg=7;+1<+F+1<+@bg=0;+@fg=0; +1< +L +10< +@fg=2;+W+@fg=0; +|R +A
+bar_format = +@fg=0;+_2I+@fg=0; +@fg=4;+_5D+@fg=0; +1< +@fg=7;+@bg=5;+1<+S+1<+@bg=0;+@fg=0;+@bg=7;+@fg=7;+1<+F+1<+@bg=0;+@fg=0; +1< +L +1< +@fg=9;+W+@fg=0; +|R +A
 
 #bar_format = +@fg=0;+_2I+@fg=0; +@fg=4;+_5D+@fg=0; +1< +@fg=7;+@bg=5;+1<+S+1<+@bg=0;+@fg=0;+@bg=7;+@fg=7;+1<+F+1<+@bg=0;+@fg=0; +1< +L +2<+@fg=6;+W+@fg=0; +|T +@fg=1;%T +1< %d-%m-%y+@fg=0; +|R +A
 

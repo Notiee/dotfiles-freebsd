@@ -13,4 +13,4 @@ Remember to edit ~/.xprofile to enable virtual machine services
 
 
 ### Screenshot
-![screenshot](https://github.com/Notiee/dotfiles-freebsd/blob/main/sshot.png?raw=true)
+![screenshot](https://github.com/Notiee/dotfiles-freebsd/screenshots/blob/main/sshot.png?raw=true)
